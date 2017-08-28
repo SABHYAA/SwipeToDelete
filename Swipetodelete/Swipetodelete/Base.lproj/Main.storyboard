@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cats-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Cats" customModule="Swipetodelete" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iXC-L0-cfK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jnn-zS-KyY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bkO-BA-p7F" customClass="catsName">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Catcell" id="Vdk-bv-qlK" customClass="Catcell" customModule="Swipetodelete" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vdk-bv-qlK" id="Sxk-O4-C72">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cat name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7K-av-Y1h">
+                                                    <rect key="frame" x="10" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="X7K-av-Y1h" firstAttribute="leading" secondItem="Sxk-O4-C72" secondAttribute="leading" constant="10" id="RP8-hz-rt1"/>
+                                                <constraint firstItem="X7K-av-Y1h" firstAttribute="centerY" secondItem="Sxk-O4-C72" secondAttribute="centerY" id="eJJ-cl-ORM"/>
+                                                <constraint firstAttribute="trailing" secondItem="X7K-av-Y1h" secondAttribute="trailing" constant="20" id="ogs-vL-Gvv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="catNameLabel" destination="X7K-av-Y1h" id="VSJ-ug-g06"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bkO-BA-p7F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CeX-s0-Aq0"/>
+                            <constraint firstItem="Jnn-zS-KyY" firstAttribute="top" secondItem="bkO-BA-p7F" secondAttribute="bottom" id="Szj-df-b4o"/>
+                            <constraint firstItem="bkO-BA-p7F" firstAttribute="top" secondItem="iXC-L0-cfK" secondAttribute="bottom" id="tl6-ss-h9t"/>
+                            <constraint firstAttribute="trailing" secondItem="bkO-BA-p7F" secondAttribute="trailing" id="yp2-Bp-new"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="bkO-BA-p7F" id="cb1-2q-12u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474.39999999999998" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>
